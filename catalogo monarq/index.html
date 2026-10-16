@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo de fragancias de Monarq Maison da Parfum" />
+  <title>Monarq | Maison da Parfum</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="announcement-bar">
+    ENVÍOS A TODA REPÚBLICA DOMINICANA <span>✦</span> ASESORÍA PERSONALIZADA
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Monarq Maison da Parfum, inicio">
+      <span class="brand-logo">
+        <span class="brand-name">MONARQ</span>
+        <span class="brand-caption">MAISON DA PARFUM</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#coleccion">Colección</a>
+      <a href="#experiencia">La Maison</a>
+      <a class="nav-contact" href="https://wa.me/18099391019" target="_blank" rel="noopener">
+        WhatsApp <span>↗</span>
+      </a>
+      <a class="nav-contact nav-instagram" href="https://instagram.com/monarq.parfum" target="_blank" rel="noopener">
+        Instagram <span>↗</span>
+      </a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero reveal">
+      <p class="eyebrow">MONARQ MAISON DA PARFUM</p>
+      <h1>El arte de dejar<br /><em>una huella.</em></h1>
+      <p class="hero-copy">
+        Fragancias que narran presencia, elegancia y un recuerdo imposible de olvidar.
+      </p>
+
+      <a class="button button-gold" href="#coleccion">
+        Descubrir la colección <span>↓</span>
+      </a>
+
+      <div class="hero-monogram" aria-hidden="true">M</div>
+    </section>
+
+    <section class="experience reveal" id="experiencia">
+      <div class="experience-copy">
+        <p class="eyebrow">ATENCIÓN PRIVADA</p>
+        <h2>Encuentra tu<br /><em>esencia personal.</em></h2>
+        <p>
+          Te acompañamos a elegir una fragancia que se sienta completamente tuya.
+        </p>
+
+        <a class="text-link" href="https://wa.me/18099391019" target="_blank" rel="noopener">
+          Hablar con un asesor <span>→</span>
+        </a>
+      </div>
+
+      <div class="experience-art" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="scent-line line-one"></span>
+        <span class="scent-line line-two"></span>
+        <span class="scent-line line-three"></span>
+        <p>PARFUM<br /><em>EST. 2026</em></p>
+      </div>
+    </section>
+
+    <section class="catalogue" id="coleccion">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">SELECCIÓN MONARQ</p>
+          <h2>Nuestra <em>colección</em></h2>
+        </div>
+
+        <p class="section-intro">
+          Una selección curada de fragancias para convertir cada momento en una firma.
+        </p>
+      </div>
+
+      <div class="filters reveal" aria-label="Filtros de fragancias">
+        <button class="filter active" data-filter="all" aria-pressed="true" type="button">Todo</button>
+        <button class="filter" data-filter="women" aria-pressed="false" type="button">Para ella</button>
+        <button class="filter" data-filter="men" aria-pressed="false" type="button">Para él</button>
+        <button class="filter" data-filter="unisex" aria-pressed="false" type="button">Unisex</button>
+      </div>
+
+      <div class="filters wear-filters reveal" aria-label="Filtrar por momento de uso">
+        <span class="wear-filter-label">Momento</span>
+        <button class="filter wear-filter active" data-wear="all" aria-pressed="true" type="button">Todos</button>
+        <button class="filter wear-filter" data-wear="Día" aria-pressed="false" type="button">Día</button>
+        <button class="filter wear-filter" data-wear="Noche" aria-pressed="false" type="button">Noche</button>
+        <button class="filter wear-filter" data-wear="Versátil" aria-pressed="false" type="button">Versátil</button>
+      </div>
+
+      <div class="product-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="quote reveal">
+      <p>“Una fragancia es el accesorio invisible que permanece cuando todo lo demás se ha ido.”</p>
+      <span>— MONARQ MAISON DA PARFUM</span>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 MONARQ MAISON DA PARFUM</span>
+    <span>SANTO DOMINGO, RD</span>
+    <a href="#inicio">VOLVER ARRIBA ↑</a>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+      observer.observe(element);
+    });
+
+    const products = [
+      { brand: "Bond No. 9", name: "Bleecker Street", image: "images/products/bottles/bond-bleecker-street.jpg", family: "AROMÁTICA · AMADERADA", description: "Aromático y elegante, con un perfil equilibrado para distintas ocasiones.", wear: "Versátil", tone: "#678c59", category: "unisex" },
+      { brand: "Bond No. 9", name: "New York Nights", image: "images/products/bottles/bond-new-york-nights.jpg", family: "ÁMBAR · GOURMAND", description: "Cálido y envolvente, ideal para destacar al caer la noche.", wear: "Noche", tone: "#252044", category: "unisex" },
+      { brand: "Jo Milano Paris", name: "Game of Spades Emerald", image: "images/products/bottles/game-of-spades-emerald.webp", family: "FRUTAL · AMADERADA", description: "Intenso y sofisticado, con una presencia marcada para la noche.", wear: "Noche", tone: "#16804b", category: "unisex" },
+      { brand: "Jo Milano Paris", name: "Game of Spades Full House", image: "images/products/bottles/game-of-spades-full-house-direct.webp", family: "AROMÁTICA · AMADERADA", description: "Fresco y versátil, fácil de llevar durante el día o la noche.", wear: "Versátil", tone: "#168fc0", category: "unisex" },
+      { brand: "Armaf", name: "Odyssey Aqua Edition", image: "images/products/bottles/armaf-odyssey-aqua-standalone.png", family: "ACUÁTICA · CÍTRICA", description: "Una fragancia fresca y luminosa, apropiada para el día.", wear: "Día", tone: "#55b9aa", category: "men" },
+      { brand: "Armaf", name: "Eter Arabian Sky", image: "images/products/bottles/armaf-eter-arabian-sky-isolated.jpg", family: "ÁMBAR · AMADERADA", description: "Aromático y cálido, con una presencia adaptable a distintas ocasiones.", wear: "Versátil", tone: "#2b9b9b", category: "unisex" },
+      { brand: "Lattafa Pride", name: "Art of Universe", image: "images/products/bottles/lattafa-art-of-universe-clean.jpg", family: "ACUÁTICA · AMADERADA", description: "Fresco y moderno, recomendado para acompañar el día.", wear: "Día", tone: "#315b9c", category: "unisex" },
+      { brand: "Afnan", name: "9PM Night Out", image: "images/products/bottles/afnan-9pm-night-out.png", family: "DULCE · ESPECIADA", description: "Intenso y envolvente, pensado para salidas y ocasiones nocturnas.", wear: "Noche", tone: "#292627", category: "men" },
+      { brand: "Afnan", name: "Supremacy Collector's Edition", image: "images/products/bottles/afnan-supremacy-collectors-edition-clean.png", family: "FRUTAL · AMADERADA", description: "Elegante y equilibrado, con un carácter que funciona en distintos momentos.", wear: "Versátil", tone: "#858887", category: "men" },
+      { brand: "Bond No. 9", name: "Greenwich Village", image: "images/products/bottles/bond-greenwich-village.png", family: "GOURMAND · FLORAL", description: "Dulce y refinado, una opción versátil para diferentes ocasiones.", wear: "Versátil", tone: "#16a394", category: "unisex" },
+      { brand: "Jo Milano Paris", name: "Game of Spades Royale", image: "images/products/bottles/game-of-spades-royale.png", family: "AMADERADA · AROMÁTICA", description: "Cálido, refinado y equilibrado para distintas ocasiones.", wear: "Versátil", tone: "#d5c6a4", category: "unisex" },
+      { brand: "Bond No. 9", name: "TriBeCa", image: "images/products/bottles/bond-no-9-tribeca.png", family: "GOURMAND · AMADERADA", description: "Dulce y envolvente, con un carácter moderno y elegante.", wear: "Versátil", tone: "#d9c9a4", category: "unisex" },
+      { brand: "Lattafa", name: "Eclaire", image: "images/products/bottles/lattafa-eclaire-isolated.jpg", family: "DULCE · GOURMAND", description: "Caramelo cremoso, vainilla y un fondo cálido y envolvente.", wear: "Noche", tone: "#d2b79b", category: "women" },
+      { brand: "Lattafa", name: "Eclaire Pistache", image: "images/products/bottles/lattafa-eclaire-pistache-isolated.jpg", family: "PISTACHO · GOURMAND", description: "Pistacho suave y acordes dulces con una sensación acogedora.", wear: "Versátil", tone: "#a9b681", category: "women" },
+      { brand: "Jo Milano Paris", name: "Game of Spades Queen", image: "images/products/bottles/game-of-spades-queen-isolated.jpg", family: "FRUTAL · FLORAL", description: "Frutal, dulce y elegante, con una estela femenina y envolvente.", wear: "Versátil", tone: "#d88882", category: "women" },
+      { brand: "Rasasi", name: "Hawas Ice", image: "images/products/bottles/hawas-ice.png", family: "ACUÁTICA · CÍTRICA", description: "Una salida fresca y chispeante con carácter acuático.", wear: "Día", tone: "#3b788d" },
+      { brand: "Afnan", name: "9AM Dive", image: "images/products/bottles/9am-dive.jpg", family: "CÍTRICA · ACUÁTICA", description: "Fresco, dinámico y especialmente agradable con calor.", wear: "Día", tone: "#168ca8" },
+      { brand: "Rasasi", name: "Hawas for Him", image: "images/products/bottles/hawas-for-him.png", family: "FRUTAL · ACUÁTICA", description: "Frutal y marino, con una presencia fácil de llevar.", wear: "Versátil", tone: "#354875" },
+      { brand: "Al Haramain", name: "Amber Oud Aqua Dubai", image: "images/products/bottles/amber-oud-aqua-dubai.webp", family: "CÍTRICA · AROMÁTICA", description: "Aromático y luminoso, ideal para ambientes cálidos.", wear: "Día", tone: "#0795a7" },
+      { brand: "Al Haramain", name: "Amber Oud Rouge", image: "images/products/bottles/amber-oud-rouge.jpg", family: "ÁMBAR · DULCE", description: "Cálido, dulce y envolvente; destaca al caer la tarde.", wear: "Noche", tone: "#9a4731" },
+      { brand: "Lattafa", name: "Asad Bourbon", image: "images/products/bottles/asad-bourbon.jpg", family: "ESPECIADA · ÁMBAR", description: "Especiado y cálido, con un carácter intenso.", wear: "Noche", tone: "#70432c" },
+      { brand: "Valentino", name: "Uomo Born in Roma Intense", image: "images/products/bottles/valentino-uomo-born-in-roma-intense.jpg", family: "ÁMBAR · AROMÁTICA", description: "Vainilla intensa y lavanda en un perfil elegante.", wear: "Noche", tone: "#69263d" },
+      { brand: "Lattafa", name: "Asad Zanzibar", image: "images/products/bottles/asad-zanzibar.jpg", family: "FRESCA · TROPICAL", description: "Acordes frescos con un giro cálido y exótico.", wear: "Versátil", tone: "#314d77" },
+      { brand: "Bond No. 9", name: "Lafayette Street", image: "images/products/bottles/lafayette-street.webp", family: "AROMÁTICA · AMADERADA", description: "Fougère moderno con un fondo suave y amaderado.", wear: "Versátil", tone: "#24252d" },
+      { brand: "Lattafa", name: "Fakhar Men", image: "images/products/bottles/fakhar-men.jpg", family: "AROMÁTICA · FRESCA", description: "Limpio y aromático, con un estilo pulido.", wear: "Día", tone: "#55575b" },
+      { brand: "Rasasi", name: "Hawas Tropical", image: "images/products/bottles/hawas-tropical.jpg", family: "FRUTAL · TROPICAL", description: "Jugoso y fresco, pensado para días soleados.", wear: "Día", tone: "#25836a" },
+      { brand: "Maison Alhambra", name: "Jean Lowe Vibe", image: "images/products/bottles/jean-lowe-vibe.jpg", family: "FRUTAL · AMADERADA", description: "Vibrante y moderno, con un perfil adaptable.", wear: "Versátil", tone: "#5c9b75" },
+      { brand: "Armaf", name: "Odyssey Homme White Edition", image: "images/products/bottles/odyssey-homme-white-edition.jpg", family: "CÍTRICA · AMADERADA", description: "Fresco y limpio, fácil de combinar durante el día.", wear: "Versátil", tone: "#a7a99e" },
+      { brand: "Jo Milano Paris", name: "Game of Spades Double Bonus", image: "images/products/bottles/game-of-spades-double-bonus.jpg", family: "CÍTRICA · AMADERADA", description: "Aromático y duradero, funciona de día o de noche.", wear: "Versátil", tone: "#3d78a6" },
+      { brand: "Jo Milano Paris", name: "Game of Spades Diamond", image: "images/products/bottles/game-of-spades-diamond.png", family: "AMADERADA · INTENSA", description: "Un perfil profundo y llamativo para ocasiones especiales.", wear: "Noche", tone: "#25252a" },
+      { brand: "Jo Milano Paris", name: "Game of Spades Platinum", image: "images/products/bottles/game-of-spades-platinum.jpg", family: "AROMÁTICA · AMADERADA", description: "Elegante y equilibrado, adecuado para distintas ocasiones.", wear: "Versátil", tone: "#7a858b" },
+      { brand: "Jo Milano Paris", name: "Game of Spades All-In", image: "images/products/bottles/game-of-spades-all-in.jpg", family: "FRUTAL · ESPECIADA", description: "Vibrante y con carácter, de salida alegre y marcada.", wear: "Versátil", tone: "#de642e" }
+    ];
+
+    const productGrid = document.querySelector(".product-grid");
+    const audienceFilters = document.querySelectorAll("[data-filter]");
+    const wearFilters = document.querySelectorAll("[data-wear]");
+    let selectedAudience = "all";
+    let selectedWear = "all";
+
+    function renderProducts() {
+      const visibleProducts = products.filter((product) => {
+        const matchesAudience = selectedAudience === "all" || (product.category || "men") === selectedAudience;
+        const matchesWear = selectedWear === "all" || product.wear === selectedWear;
+        return matchesAudience && matchesWear;
+      });
+
+      if (visibleProducts.length === 0) {
+        productGrid.innerHTML = '<p class="catalogue-empty">Próximamente: nuevas fragancias para esta selección.</p>';
+        return;
+      }
+
+      productGrid.innerHTML = visibleProducts.map((product) => `
+        <article class="product-card">
+          <div class="product-image${product.category === "women" || product.category === "unisex" ? " product-image--portrait" : ""}${product.name === "Game of Spades Platinum" ? " product-image--platinum" : ""}">
+            <span class="tag">${product.wear}</span>
+            <img class="product-photo" src="${product.image}" alt="${product.brand} ${product.name}" loading="lazy" decoding="async" />
+          </div>
+          <div class="product-details">
+            <p class="product-kind">${product.family}</p>
+            <h3>${product.name}</h3>
+            <p class="product-description">${product.description}</p>
+            <div class="product-bottom">
+              <span>Uso sugerido<strong>${product.wear}</strong></span>
+            </div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    audienceFilters.forEach((button) => {
+      button.addEventListener("click", () => {
+        selectedAudience = button.dataset.filter;
+        audienceFilters.forEach((filter) => {
+          const isActive = filter === button;
+          filter.classList.toggle("active", isActive);
+          filter.setAttribute("aria-pressed", String(isActive));
+        });
+
+        renderProducts();
+      });
+    });
+
+    wearFilters.forEach((button) => {
+      button.addEventListener("click", () => {
+        selectedWear = button.dataset.wear;
+        wearFilters.forEach((filter) => {
+          const isActive = filter === button;
+          filter.classList.toggle("active", isActive);
+          filter.setAttribute("aria-pressed", String(isActive));
+        });
+
+        renderProducts();
+      });
+    });
+
+    renderProducts();
+  </script>
+</body>
+</html>
